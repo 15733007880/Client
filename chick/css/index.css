@@ -327,7 +327,7 @@
     }
 
     .The .The-h {
-        background: url(./images/deco.png)no-repeat;
+        background: url(../images/deco.png)no-repeat;
         background-size: contain;
         padding-left: 14px;
         margin-bottom: 20px;

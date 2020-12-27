@@ -29,11 +29,15 @@ var mySwiper = new Swiper('.swiper-container', {
 
 
 let listBox = document.getElementsByClassName('list-box')[0];
-let TheList = document.getElementsByClassName('The-list')
+var TheList;
+let divs = document.getElementById('divs');
+// console.log(divs);
 let box = document.getElementsByClassName('box');
+// console.log(box);
 let data = null;
 let str = ``;
 // str = Array.from(str)
+var Text;
 
 var xhr = new XMLHttpRequest;
 xhr.open('get', 'data.json');
@@ -44,11 +48,10 @@ xhr.onreadystatechange = function () {
     bindHTML(data)
 }
 xhr.send();
-
+// console.log(data);
 function bindHTML(data) {
-    for (let i = 0; i < 2; i++) {
-        let index = Math.round(Math.random() * 9)
-        data.forEach((item, index) => {
+    for (let i = 0; i < 1; i++) {
+        data.forEach(function(item){
             str += `<div class="The-list" id="divs">
             <a href="javascript:;">
                 <h3 class="The-h">${item.title}</h3>
@@ -62,12 +65,25 @@ function bindHTML(data) {
             </div>
         </div>`
         });
+     
+        for (let i = 0; i < 4; i++) {
+            TheList = document.getElementsByClassName('The-list');
+            TheList = Array.from(TheList)
+            // console.log(TheList);
+            box[i].innerHTML = str;
+        }
     }
-    for (let i = 0; i < 50; i++) {
-        box[i].innerHTML = str;
-        TheList[i].style.height = Math.round(Math.random() * (450 - 250) + 300) + 'px'
+    for(var i=0;i<TheList.length;i++){
+        // console.log(TheList[i]);
+        TheList[i].style.height = Math.round(Math.random()*(450-300)+300) + 'px'
     }
 }
+
+
+
+
+
+
 
 
 
@@ -78,45 +94,44 @@ let surTop = document.getElementById('top');
 let nav = document.getElementsByClassName('nav')[0];
 let navlogo = document.getElementsByClassName('nav-logo')[0];
 navlogo.style.background = '#ffd47a'
-console.log(navlogo);
-window.onscroll = function (){
+window.onscroll = function () {
     let winH = utils.win('clientHeight')// 浏览器的可视区域的高度
     let winT = utils.win('scrollTop') //获取浏览器滚动条的高度
-   if(winT>=winH){
-    surTop.style.display = 'block' 
-   }else{
-       surTop.style.display = 'none'
-   }
-   if(winT>=320){
-    nav.style.background = '#fff'
-    navlogo.style.background = '#fff'
-    // navlogo.onmouseenter = function(){
-    //     navlogo.style.background = '#f5f3f3'
-    // }
-    // navlogo.onmouseleave = function(){
-    //     navlogo.style.background = ' #fff'
-    // }
-   }else{
-    nav.style.background = '#ffd47a'
-    navlogo.style.background = '#ffd47a'
-    // navlogo.onmouseenter = function(){
-    //     navlogo.style.background = '#ffbb28'
-    // }
-    // navlogo.onmouseleave = function(){
-    //     navlogo.style.background = '#ffd47a'
-    // }
-   }
+    if (winT >= winH) {
+        surTop.style.display = 'block'
+    } else {
+        surTop.style.display = 'none'
+    }
+    if (winT >= 320) {
+        nav.style.background = '#fff'
+        navlogo.style.background = '#fff'
+        // navlogo.onmouseenter = function(){
+        //     navlogo.style.background = '#f5f3f3'
+        // }
+        // navlogo.onmouseleave = function(){
+        //     navlogo.style.background = ' #fff'
+        // }
+    } else {
+        nav.style.background = '#ffd47a'
+        navlogo.style.background = '#ffd47a'
+        // navlogo.onmouseenter = function(){
+        //     navlogo.style.background = '#ffbb28'
+        // }
+        // navlogo.onmouseleave = function(){
+        //     navlogo.style.background = '#ffd47a'
+        // }
+    }
 }
-surTop.onclick = function (){
-    let winT  = utils.win('scrollTop');
-    let part = winT/20;
-    let itemr = setInterval(function (){
+surTop.onclick = function () {
+    let winT = utils.win('scrollTop');
+    let part = winT / 20;
+    let itemr = setInterval(function () {
         winT -= part
-        utils.win('scrollTop',winT);
-        if(winT <= 0){
+        utils.win('scrollTop', winT);
+        if (winT <= 0) {
             clearInterval(itemr)
         }
-    },20)
+    }, 20)
 }
 
 
