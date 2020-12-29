@@ -80,15 +80,6 @@ function bindHTML(data) {
 }
 
 
-
-
-
-
-
-
-
-
-
 // 回到顶部
 let surTop = document.getElementById('top');
 let nav = document.getElementsByClassName('nav')[0];
