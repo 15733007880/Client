@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/15733007880/Client/issues"
   },
-  "homepage": "https://github.com/15733007880/Client#readme"
+  "homepage": "https://github.com/15733007880/Client#readme",
+  "dependencies": {}
 }
