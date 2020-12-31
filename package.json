@@ -17,5 +17,8 @@
     "url": "https://github.com/15733007880/Client/issues"
   },
   "homepage": "https://github.com/15733007880/Client#readme",
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "swiper": "^5.4.5"
+  }
 }

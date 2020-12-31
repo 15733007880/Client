@@ -1,0 +1,63 @@
+.header-nav {
+  height: 60px;
+  background: #ffd47a;
+  position: fixed;
+  width: 100%;
+}
+.header-nav .header-logo {
+  padding: 15px;
+}
+.header-nav .header-logo a {
+  width: 110px;
+  display: block;
+}
+.header-nav .nav-right {
+  height: 60px;
+}
+.header-nav .nav-right .nav-right-fontSize a {
+  color: #bc894b;
+}
+.header-nav .nav-right .nav-right-img {
+  width: 60px;
+  height: 60px;
+  padding: 15px 10px 9px 10px;
+  display: inline-block;
+  text-align: center;
+}
+.header-nav .nav-right .nav-right-img a img {
+  width: 25px;
+  height: 25px;
+}
+.header-nav .nav-right .nav-right-img:hover {
+  background-color: #ffbb28;
+}
+.header-nav .sousuo {
+  padding: 12px 10px;
+}
+.header-nav .sousuo .form {
+  max-width: 600px;
+  max-height: 35px;
+  height: 100%;
+  background: #f5f3f3;
+  border-radius: 25px;
+  display: flex;
+  padding-right: 6px;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-nav .sousuo .form .nav-seek {
+  width: 100%;
+  border: none;
+  background: #f5f3f3;
+}
+.header-nav .sousuo .form .icon-search {
+  margin: 0px 5px 0px 0px;
+}
+.header-nav .sousuo .form .icon-search .icon-fangdajing,
+.header-nav .sousuo .form .icon-search .icon-you {
+  font-size: 20px;
+  color: #7d7c7c;
+}

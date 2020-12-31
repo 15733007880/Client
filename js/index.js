@@ -56,7 +56,7 @@ function bindHTML(data) {
         data.forEach(function(item){
             str += `<div class="The-list" id="divs">
             <a href="javascript:;">
-                <h3 class="The-h">${item.title}</h3>
+                <h4 class="The-h">${item.title}</h4>
                 <div class="The-p">
                     ${item.p}
                 </div>

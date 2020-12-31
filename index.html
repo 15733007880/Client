@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小鸡词典 - 查网络流行语，就上小鸡词典</title>
-    <link rel="stylesheet" href="./css/reset.min.css">
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" href="./images/apple-touch-icon.png">
-    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.min.css"> <!-- 公共样式 -->
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css"> <!-- 轮播图插件样式 -->
+    <link rel="stylesheet" href="./css/index.css"> <!-- 首页样式 -->
+    <link rel="icon" href="./images/apple-touch-icon.png"> <!-- icon样式 -->
+    <link rel="stylesheet" href="./css/iconfont.css"> <!-- 阿里icon字体样式 -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <style>
-    .concentr {
-        width: 1280px;
-        margin: 0 auto;
+    .container{
+        width: 1250px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 0px;
+        padding-left: 0px;
     }
-
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
     a {
         color: #000000;
     }
@@ -24,36 +31,68 @@
     body {
         background: #f1f0f0;
     }
+
+    p {
+        margin: 0;
+    }
 </style>
 
 <body>
     <!-- 头部部分start -->
-    <div class="header">
-        <!-- 导航start -->
-        <div class="nav">
-            <div class="nav-logo">
-                <h3><a href="javascriptL:;"><img src="./images/logo.png" alt="" srcset=""></a></h3>
+    <div class="container-fluid">
+        <div></div>
+            <!-- 导航start -->
+            <div class="nav">
+                <!-- logo -->
+                <div class="nav-logo">
+                    <h3><a href="javascriptL:;"><img src="./images/logo.png" alt="" srcset=""></a></h3>
+                </div>
+                <!-- logoEnd -->
+                <!-- 搜索框start -->
+                <div>
+                    <form action="" class="form">
+                        <div class="icon-search icon-left">
+                            <span class="iconfont icon-fangdajing"></span>
+                        </div>
+                        <input type="text" placeholder="小丑是谁" class="nav-seek">
+                        <div class="icon-search">
+                            <a href="javascript:;"><span class="iconfont icon-you"></span></a>
+                        </div>
+                    </form>
+                </div>
+                <!-- 搜索框start -->    
+                <div class="nav-right">
+                    <span class="nav-right-fontSize"><a href="javascript:;">小计词典APP</a></span>
+                    <span class="nav-right-img"><a href="javascript:;"><img src="./images/create.png" alt=""></a></span>
+                    <span class="nav-right-img"><a href="javascript:;"><img src="./images/sandwitch.png" alt=""></a></span>
+                </div>
+                <!--  -->
             </div>
-            <div>
-                <form action="" class="form">
-                    <div class="icon-search icon-left">
-                       <span class="iconfont icon-fangdajing"></span>
-                    </div>
-                    <input type="text" placeholder="小丑是谁" class="nav-seek">
-                    <div class="icon-search">
-                        <a href="javascript:;"><span class="iconfont icon-you"></span></a>
-                    </div>
-                </form>
-            </div>
-            <div class="nav-right">
-                <span class="nav-right-fontSize"><a href="javascript:;">小计词典APP</a></span>
-                <span class="nav-right-img"><a href="javascript:;"><img src="./images/create.png" alt=""></a></span>
-                <span class="nav-right-img"><a href="javascript:;"><img src="./images/sandwitch.png" alt=""></a></span>
-            </div>
+            <!-- 导航end -->
         </div>
-        <!-- 导航end -->
-        <!--  -->
-        <div class="concentr hunt">
+    </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="header">
+        <div class="container">
+                    <!--  -->
+        <div class="hunt container">
             <div class="hunt-back">
                 <span class="hunt-img"><img src="./images/logo(1).png" alt=""></span>
                 <span class="hunt-span"><a href="javascript:;"><img src="./images/download.png" alt=""></a></span>
@@ -133,22 +172,24 @@
                 </div>
             </div>
         </div>
+        <!--  -->
+        </div>
     </div>
     <!-- 头部部分end -->
 
 
 
     <!-- 主体部分start -->
-    <section class="sectionMax">
-        <section class="concentr sectionlist">
+    <section class="sectionMax container">
+        <section class="container sectionlist">
             <!-- 左部分start -->
             <div class="special">
-                <h1 class="special-h3">宝藏专辑</h1>
+                <h4 class="special-h3">宝藏专辑</h4>
                 <div class="special-list">
                     <div class="list-own">
                         <a href="javascript:;"><img src="./images/baozang.jpg" alt="" srcset="">
                             <div class="list-own">
-                                <h3>圣诞快乐</h3>
+                                <h4>圣诞快乐</h4>
                                 <span>16个词条&nbsp;&nbsp;0个关注</span>
                             </div>
                         </a>
@@ -156,7 +197,7 @@
                     <div class="list-own">
                         <a href="javascript:;"><img src="./images/zhihu.jpg" alt="" srcset="">
                             <div class="list-own">
-                                <h3>十大知乎梗</h3>
+                                <h4>十大知乎梗</h4>
                                 <span>16个词条&nbsp;&nbsp;0个关注</span>
                             </div>
                         </a>
@@ -164,7 +205,7 @@
                     <div class="list-own">
                         <a href="javascript:;"><img src="./images/aoteman.jpg" alt="" srcset="">
                             <div class="list-own">
-                                <h3>你相信光吗?</h3>
+                                <h4>你相信光吗?</h4>
                                 <span>16个词条&nbsp;&nbsp;0个关注</span>
                             </div>
                         </a>
@@ -172,7 +213,7 @@
                     <div class="list-own">
                         <a href="javascript:;"><img src="./images/yanyuan.jpg" alt="" srcset="">
                             <div class="list-own">
-                                <h3>男片演员</h3>
+                                <h4>男片演员</h4>
                                 <span>56个词条&nbsp;&nbsp;8个关注</span>
                             </div>
                         </a>
@@ -180,7 +221,7 @@
                     <div class="list-own">
                         <a href="javascript:;"><img src="./images/mc.jpg" alt="" srcset="">
                             <div class="list-own">
-                                <h3>老Mc了</h3>
+                                <h4>老Mc了</h4>
                                 <span>42个词条&nbsp;&nbsp;3个关注</span>
                             </div>
                         </a>
@@ -188,7 +229,7 @@
                     <div class="list-own">
                         <a href="javascript:;"><img src="./images/santi.jpg" alt="" srcset="">
                             <div class="list-own">
-                                <h3>三体</h3>
+                                <h4>三体</h4>
                                 <span>22个词条&nbsp;&nbsp;6个关注</span>
                             </div>
                         </a>
@@ -198,7 +239,7 @@
             <!-- 左部分end -->
             <!-- 右部分start -->
             <div class="ecent">
-                <h1 class="special-h3">热门活动</h1>
+                <h4 class="special-h3">热门活动</h4>
                 <div class="lunbo">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -225,28 +266,44 @@
     <!-- 主体部分end  -->
 
 
+
+
+
+
+
     <!-- 功能图标开始 -->
-    <div class="top" id="top">
+    <!-- <div class="top" id="top">
         <img src="./images/Shang.png" alt="" srcset="">
-    </div>
+    </div> -->
     <!-- 功能图标结束 -->
 
+
+
+
+
+
+
+
+
+
+
+
     <!-- 文章start -->
-    <section class="The">
-        <section class="concentr list-box">
-            <div class="box-max">
+    <!-- <section class="The">
+        <section class="container list-box">
+            <div class="box-max row">
 
-                <div class="box"> </div>
+                <div class="box col-md-3"> </div>
 
-                <div class="box"> </div>
+                <div class="box col-md-3"> </div>
 
-                <div class="box"> </div>
+                <div class="box col-md-3"> </div>
 
-                <div class="box"> </div>
+                <div class="box col-md-3"> </div>
 
             </div>
         </section>
-    </section>
+    </section> -->
     <!-- 文章end -->
 
 
@@ -254,7 +311,7 @@
 
 
     <script src="./js/utils.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="/node_modules/swiper/js/swiper.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

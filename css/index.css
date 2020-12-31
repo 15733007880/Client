@@ -1,12 +1,12 @@
 
     .header {
         height: 350px;
-        width: 100%;
         background-image: url(../images/backimg.png);
         background-color: #ffd47a;
         background-position: 0 100%;
-        background-repeat: repeat-x;
+        /* background-repeat: repeat-x; */
         background-size: auto calc(100% + 20px);
+        position: relative;
     }
 
     .icon-search {
@@ -113,21 +113,22 @@
 
     /*  */
     .hunt {
-        height: 300px;
         display: flex;
         justify-content: space-between;
+        position: absolute;
+        bottom: 0;
     }
 
     .hunt-back {
         width: 470px;
         /* background: red; */
+        height: 100px;
     }
 
     .hunt-back .hunt-img img {
         width: 215px;
         height: 88px;
         display: inline-block;
-        margin-top: 130px;
     }
 
     .hunt-back .hunt-span img {
@@ -140,10 +141,10 @@
         width: 640px;
         height: 256px;
         background: #ffffff;
-        margin-top: 20px;
         padding: 4px 24px;
         border-radius: 15px;
-        margin-top: 60px;
+        /* position: absolute;
+        bottom: 20px; */
     }
 
     .hunt .hunt-font {
@@ -213,7 +214,7 @@
         line-height: 20px;
         color: #474747;
         font-weight: 500;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -221,11 +222,10 @@
 
     .hunt .lis-own .lis-two p:nth-child(2) {
         font-size: 12px;
-        line-height: 16px;
+        line-height: 12px;
         font-weight: 400;
         color: #a5a5a5;
         overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
     }
 
@@ -243,7 +243,7 @@
     }
 
     .sectionMax .special {
-        width: 620px;
+        width: 600px;
         height: 300px;
         /* border: 1px solid red; */
         background: #ffffff;
@@ -268,21 +268,17 @@
     .sectionMax .list-own {
         display: inline-block;
         vertical-align: top;
+        width:47%;
+        margin-left: 15px;
+        /* margin-top: 10px; */
     }
 
     .sectionMax .list-own a img {
         width: 60px;
         height: 60px;
-        margin-left: 60px;
     }
-
-    .sectionMax .list-own {
-        margin-left: 15px;
-        margin-top: 10px;
-    }
-
-    .sectionMax .list-own h3 {
-        margin: 10px 0 10px 5px;
+    .sectionMax .list-own h4 {
+        margin: 10px 0 5px 0px;
     }
 
     .ecent {
@@ -306,8 +302,8 @@
 
     /* 瀑布流 */
     .The .The-list {
-        width: 265px;
-        height: 400px;
+        width: 300px;
+        /* height: 400px; */
         padding: 20px 20px 0 20px;
         background: #ffffff;
         margin-top: 10px;
@@ -398,10 +394,10 @@
         justify-content: space-between;
     }
 
-    .The .box {
+    /* .The .box {
         width: 300px;
-        /* border: 1px solid royalblue; */
-    }
+        border: 1px solid royalblue;
+    } */
 
 
     /* 小功能上移 */
