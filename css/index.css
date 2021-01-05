@@ -246,8 +246,6 @@
         height: 300px;
         /* border: 1px solid red; */
         background: #ffffff;
-        display: inline-block;
-        vertical-align: top;
     }
 
     .sectionMax .special-h3 {
@@ -370,8 +368,8 @@
     }
 
     .The .The-buttom img:hover {
-        background: #cccccc;
-        float: right;
+        /* background: #cccccc;
+        float: right; */
         cursor: pointer;
     }
 

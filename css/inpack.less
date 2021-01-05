@@ -2,41 +2,51 @@
 
 .header-nav {
     height: 60px;
-    background: @back-color;
+    // background: @back-color;
     position: fixed;
     width: 100%;
+    z-index: 99;
+
     .header-logo {
         padding: 15px;
+
         a {
             width: 110px;
             display: block;
         }
     }
-    .nav-right{
+
+    .nav-right {
         height: 60px;
+
         // background: red;
-        .nav-right-fontSize a{
+        .nav-right-fontSize a {
             color: #bc894b;
         }
-        .nav-right-img{
+
+        .nav-right-img {
             width: 60px;
             height: 60px;
             padding: 15px 10px 9px 10px;
             display: inline-block;
             text-align: center;
-            a{
-                img{
+
+            a {
+                img {
                     width: 25px;
                     height: 25px;
                 }
             }
         }
-        .nav-right-img:hover{
+
+        .nav-right-img:hover {
             background-color: #ffbb28;
         }
     }
+
     .sousuo {
         padding: 12px 10px;
+
         .form {
             max-width: 600px;
             max-height: 35px;
@@ -50,6 +60,7 @@
             padding-bottom: 5px;
             margin-left: auto;
             margin-right: auto;
+
             .nav-seek {
                 width: 100%;
                 border: none;
@@ -58,12 +69,322 @@
 
             .icon-search {
                 margin: 0px 5px 0px 0px;
+
                 .icon-fangdajing,
                 .icon-you {
                     font-size: 20px;
                     color: #7d7c7c;
                 }
             }
+        }
+    }
+}
+
+// 头部背景区域样式
+.header-back {
+    height: 345px;
+    background-image: url(../images/backimg.png);
+    background-color: #ffd47a;
+    background-position: 0 100%;
+    /* background-repeat: repeat-x; */
+    background-size: auto calc(100% + 20px);
+
+    .hunt {
+        .hunt-right {
+            width: 640px;
+            height: 256px;
+            background: #ffffff;
+            padding: 4px 24px;
+            border-radius: 15px;
+            float: right;
+            margin-top: 70px;
+        }
+
+        .hunt-font {
+            width: 100%;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8px;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .hunt-font span:nth-child(1) {
+            font-size: 18px;
+            line-height: 1;
+            color: #474747;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .hunt-font span:nth-child(2) {
+            font-size: 16px;
+            line-height: 1;
+            color: #bc894b;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .hunt-lst {
+            width: 100%;
+            /* background: palevioletred; */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hunt-lst a {
+            width: 40%;
+            display: inline-block;
+            /* background: red; */
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .hunt-lst a:nth-child(odd) {
+            margin-left: 20px;
+            margin-right: 70px;
+        }
+
+        .lis-own {
+            display: flex;
+        }
+
+        .lis-own div:nth-child(1) {
+            margin: 8px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffba52;
+        }
+
+        .lis-own .lis-two {
+            margin-top: 5px;
+        }
+
+        .lis-own .lis-two p:nth-child(1) {
+            font-size: 14px;
+            line-height: 20px;
+            color: #474747;
+            font-weight: 500;
+            margin-bottom: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .lis-own .lis-two p:nth-child(2) {
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 400;
+            color: #a5a5a5;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    .container {
+        width: 1350px;
+
+        .hunt-back {
+            width: 480px;
+            // background: red;
+            float: left;
+            margin-top: 180px;
+
+            span:nth-child(1) img {
+                width: 215px;
+                height: 88px;
+                display: inline-block;
+            }
+
+            span:nth-child(2) img {
+                width: 185px;
+                height: 65px;
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}
+
+
+// 主体部分样式
+.sectionMax {
+    margin-top: 16px;
+
+    /* border: 1px solid red; */
+    .container {
+        width: 1350px;
+
+        .special {
+            width: 700px;
+            height: 300px;
+            /* border: 1px solid red; */
+            background: #ffffff;
+            float: left;
+        }
+
+        .list-own a img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .special-list {
+            width: 100%;
+            /* background: red; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .list-own {
+            display: inline-block;
+            vertical-align: top;
+            width: 48%;
+            margin-top: 10px;
+
+            h4 {
+                margin: 0px 0 5px 0px;
+                color: #474747;
+            }
+        }
+
+        .list-own:nth-child(odd) {
+            //    background: red;
+            margin-left: 15px;
+        }
+    }
+
+    .sectionlist {
+
+        // display: flex;
+        // justify-content: space-between;
+        .ecent {
+            float: right;
+            background: #fff;
+            width: 600px;
+            height: 300px;
+        }
+
+        .special-h3 {
+            width: 90%;
+            line-height: 50px;
+            border-bottom: 1px solid #cccccc;
+            margin-left: 10px;
+        }
+
+        .lunbo {
+            padding: 2px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-container {
+                width: 560px;
+                height: 220px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+
+// 瀑布流效果
+.The {
+    .container {
+        width: 1350px;
+    }
+
+    .The-list {
+        width: 100%;
+        /* height: 400px; */
+        padding: 20px 20px 0 20px;
+        background: #ffffff;
+        box-sizing: border-box;
+        margin-top: 10px;
+        border-radius: 2%;
+        position: relative;
+        overflow: hidden;
+
+        .The-buttom {
+            // background: red;
+            position: absolute;
+            bottom: 0;
+            width: 90%;
+        }
+
+        .The-list:hover {
+            box-shadow: 0px 15px 15px 2px #ababab;
+        }
+
+        .The-h {
+            background: url(../images/deco.png)no-repeat;
+            background-size: contain;
+            padding-left: 14px;
+            margin-bottom: 20px;
+        }
+
+        .The-sz {
+            font-size: 12px;
+            color: #ababab;
+            float: right;
+        }
+
+        .The-buttom img {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: bottom;
+            padding: 3px 3px 0 3px;
+            vertical-align: top;
+            float: right;
+        }
+
+        .The-buttom span:nth-child(1) a {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            /* background: red; */
+            color: #e9a34e;
+            display: inline-block;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .The-buttom img:hover {
+            background: #cccccc;
+            cursor: pointer;
+        }
+
+        .The-Max-span {
+            float: right;
+        }
+
+    }
+}
+
+
+// 一键向上小火箭样式
+.top {
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    right: 1%;
+    bottom: 11%;
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+// 手机端样式
+@media screen and (max-width:768px) {
+    .The {
+        .container {
+            width: 100%;
         }
     }
 }
