@@ -1,33 +1,35 @@
-// 轮播图
-var mySwiper = new Swiper ('.swiper-container', {
+// 轮播图 
+var mySwiper = new Swiper('.swiper-container', {
+    autoplay: true,//等同于以下设置
+    autoplay: {
+        delay: 2000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+    },
     direction: 'vertical', // 垂直切换选项
     loop: true, // 循环模式选项
+
+
     
     // 如果需要分页器
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-    autoplay:true,//等同于以下设置
-  /*autoplay: {
-    delay: 3000,
-    stopOnLastSlide: false,
-    disableOnInteraction: true,
-    },*/
+
     // 如果需要前进后退按钮
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    
+
     // 如果需要滚动条
     scrollbar: {
-      el: '.swiper-scrollbar',
+        el: '.swiper-scrollbar',
     },
-  })        
+})
 
 
 
-// 文章列表
 let listBox = document.getElementsByClassName('list-box')[0];
 var TheList;
 let divs = document.getElementById('divs');
@@ -51,7 +53,7 @@ xhr.send();
 // console.log(data);
 function bindHTML(data) {
     for (let i = 0; i < 1; i++) {
-        data.forEach((item)=>{
+        data.forEach(function(item){
             str += `<div class="The-list" id="divs">
             <a href="javascript:;">
                 <h4 class="The-h">${item.title}</h4>
@@ -75,36 +77,56 @@ function bindHTML(data) {
     }
     for(var i=0;i<TheList.length;i++){
         // console.log(TheList[i]);
-        TheList[i].style.height = Math.round(Math.random()*(450-300)+300) + 'px';
+        TheList[i].style.height = Math.round(Math.random()*(450-300)+300) + 'px'
     }
 }
 
 
-
-// 小火箭一键向上
-
-let nav = document.getElementsByClassName('header-nav')[0];
+// 回到顶部
 let surTop = document.getElementById('top');
-console.log(surTop);
-// console.log(nav)
-
-window.onscroll = function (){
-    let winH = utils.win('clientHeight');// 浏览器可视区域的高度
-    let winT = utils.win('scrollTop')// 获取浏览器滚动条的高度
-    if(winT>=winH){
+let nav = document.getElementsByClassName('nav')[0];
+let navlogo = document.getElementsByClassName('nav-logo')[0];
+navlogo.style.background = '#ffd47a'
+window.onscroll = function () {
+    let winH = utils.win('clientHeight')// 浏览器的可视区域的高度
+    let winT = utils.win('scrollTop') //获取浏览器滚动条的高度
+    if (winT >= winH) {
         surTop.style.display = 'block'
-    }else{
+    } else {
         surTop.style.display = 'none'
     }
+    if (winT >= 320) {
+        nav.style.background = '#fff'
+        navlogo.style.background = '#fff'
+        // navlogo.onmouseenter = function(){
+        //     navlogo.style.background = '#f5f3f3'
+        // }
+        // navlogo.onmouseleave = function(){
+        //     navlogo.style.background = ' #fff'
+        // }
+    } else {
+        nav.style.background = '#ffd47a'
+        navlogo.style.background = '#ffd47a'
+        // navlogo.onmouseenter = function(){
+        //     navlogo.style.background = '#ffbb28'
+        // }
+        // navlogo.onmouseleave = function(){
+        //     navlogo.style.background = '#ffd47a'
+        // }
+    }
 }
-surTop.onclick = function (){
+surTop.onclick = function () {
     let winT = utils.win('scrollTop');
-    let par = winT/20;
-    let itemr = setInterval(function (){
-        winT-=par;
-        utils.win('scrollTop',winT);
-        if(winT<=0){
+    let part = winT / 20;
+    let itemr = setInterval(function () {
+        winT -= part
+        utils.win('scrollTop', winT);
+        if (winT <= 0) {
             clearInterval(itemr)
         }
-    },20)
+    }, 20)
 }
+
+
+
+// 导航固定
